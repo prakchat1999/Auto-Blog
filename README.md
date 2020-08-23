@@ -30,8 +30,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-<img src = "images/Home-Page-SS.png">
+<img src = "Readme/images/Home-Page-SS.png">
+<img src="Readme/images/Show-More-SS.png">
 
 I created this website because: I have a passion for cars and coding, and a convenient Auto - Blogging website is the best way to 
 
