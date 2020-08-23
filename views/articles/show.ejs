@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Sick</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: 'Roboto Condensed', sans-serif;
+      }
+      /* HEADER */
+      .navbar {
+          background-color: #0B0C10;
+      }
+      .navbar-brand, .footer-logo {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      .btn-main{
+        background-color: rgb(0, 123, 255) !important;
+        color: #0B0C10 !important;
+      }
+      input {
+        background-color: #1F2833 !important;
+        color:  rgb(0, 123, 255) !important;
+      }
+      /* .container {
+        background-color: #1F2833;
+      } */
+      /* HERO */
+      body {
+        background-color: #1F2833;
+      }
+      h1 {
+        color: rgb(0, 123, 255);
+      }
+      .text {
+        color: white;
+      }
+    </style>
+     <!-- NAVBAR SECTION -->
+     <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="/">Auto-Blog</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Me</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control border-0"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn-main btn btn-success my-sm-0 border-0" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- MAIN SECTION -->
+    <section class="hero py-3">
+        <div class="container">
+            <h1 class="mb-2"><%= article.title %></h1>
+            <div class="text-muted mb-2"><i class="fa fa-calendar" aria-hidden="true"></i> <%= article.createdAt.toLocaleDateString()%></div>
+            <a href="/" class="btn btn-primary">Home Page</a>
+            <a href="/articles/edit/<%= article.id %>" class="btn btn-secondary">Edit</a>
+            <div class="text mt-3"> <%- article.sanitizedHtml %> </div>
+        </div>
+      </section>
+  </body>
+</html>

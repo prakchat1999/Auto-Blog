@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- STYLING IMPORTS -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+    font-family: 'Roboto Condensed', sans-serif;
+      }
+      h1,h2,h3,h4,h5 {
+          font-weight: 700;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+      h5 {
+        font-weight: 700;
+        color: rgb(0, 123, 255)
+      }
+      a {
+        color: rgb(0, 123, 255);
+      }
+      /* HEADER */
+      .navbar {
+          background-color: #0B0C10;
+      }
+      .navbar-brand, .footer-logo {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      .btn-main{
+        background-color: rgb(0, 123, 255) !important;
+        color: #0B0C10 !important;
+      }
+      input {
+        background-color: #1F2833 !important;
+        color:  rgb(0, 123, 255) !important;
+      }
+
+      /* HERO */
+      .hero {
+        background-color: #1F2833;
+      }
+      .hero-post {
+        position: relative;
+      }
+      .hero-post-badges{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .hero-post-badges > a{
+        background-color: #0B0C10;
+        color: rgb(0, 123, 255);
+        display: block;
+        font-size: 0.8rem;
+      }
+      .hero-post-content {
+        position: absolute;
+        bottom: 10px;
+        color: rgb(0, 123, 255)
+      }
+      .hero-post-content img {
+        border: 2px solid rgb(0, 123, 255)
+      }
+      /* BLOG POSTS */
+      .blog-posts {
+        background-color: #0B0C10;
+        color: #C5C6C7;
+      }
+      .blog-post {
+        background-color: #1F2833;
+      }
+      .blog-post h3 {
+        font-size: 1.4rem;
+      }
+      .blog-post img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .blog-post .col-sm-8 {
+        border-left: 3px solid rgb(0, 123, 255);
+      }
+      .blog-post p {
+        font-size: 0.9rem;
+      }
+      .badge {
+        margin-top: 1rem;
+      }
+      .badge > a {
+        margin-left: 0.5rem;
+        padding: 0.4rem;
+        background-color: rgb(0, 123, 255);
+        color: #0B0C10 
+      }
+
+      /* SIDE BAR */
+      .social-links {
+        background-color: rgb(0, 123, 255);
+        color: #0B0C10;
+        font-size: 2rem;
+      }
+      .secondary-color {
+        background-color: #1F2833;
+        color: rgb(0, 123, 255);
+      }
+      .aside-heading {
+        border-left: 3px solid rgb(0, 123, 255);
+      }
+      .author p {
+        font-size: 0.9rem;
+      }
+      .author-social-links {
+        margin-left: 0.8rem;
+      }
+      .badges {
+        margin-top: 1rem;
+      }
+      .badges > a {
+        margin-left: 0.5rem;
+        padding: 0.4rem;
+        display: inline-block;
+        margin: 0.2rem;
+        background-color: rgb(0, 123, 255);
+        color: #0B0C10 
+      }
+
+      /* FOOTER */
+      .footer{
+        background-color: #1F2833;
+        color: rgb(0, 123, 255);
+      }
+      .footer p {
+        font-size: 0.9rem;
+      }
+      .footer a {
+        color: rgb(0, 123, 255);
+      }
+      .footer input {
+        background-color: #0B0C10 !important;
+      }
+    </style>
+    <title>Sick</title>
+  </head>
+  <body>
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">Auto-Blog</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Me</a>
+            </li>
+          </ul>
+          <a href="/articles/new" class="btn-main btn btn-success my-sm-0 border-0 mr-4">New Article</a>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control border-0"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn-main btn btn-success my-sm-0 border-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="hero-post shadow">
+              <img
+              src="https://media.zigcdn.com/media/content/2020/Feb/zw-hyundai-creta-kia-seltos.jpg"
+              class="img-fluid"
+                alt=""
+              />
+              <div class="hero-post-badges text-center">
+                <a href="#" class="p-2 mb-2 px-3"
+                  ><i class="fa fa-calendar" aria-hidden="true"></i> 25, July
+                  2020</a
+                >
+                <a href="#" class="p-2 px-3">Tech-ting</a>
+              </div>
+              <div class="hero-post-content">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <img
+                      alt="Author"
+                      class="img-fluid rounded-circle"
+                      src="https://avatars0.githubusercontent.com/u/44110563?s=400&u=e9a30f15589ca8f13107a67ed6145b5a3baf6233&v=4"
+                    />
+                  </div>
+                  <div class="col-sm-9"><h1>My Blog</h1></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="hero-post shadow mb-3">
+              <img
+                src="https://png.pngtree.com/png_detail/20181019/car-png-vector-material-png-clipart_3164061.png"
+                class="img-fluid"
+                alt=""
+              />
+              <div class="hero-post-badges text-center">
+                  <a href="#" class="p-2 mb-2 px-3"
+                    ><i class="fa fa-calendar" aria-hidden="true"></i> 25, July
+                    2020</a
+                  >
+                  <a href="#" class="p-2 px-3">Tech-ting</a>
+                </div>
+                <div class="hero-post-content">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <img
+                        alt="Author"
+                        class="img-fluid rounded-circle"
+                        src="https://avatars0.githubusercontent.com/u/44110563?s=400&u=e9a30f15589ca8f13107a67ed6145b5a3baf6233&v=4"
+                      />
+                    </div>
+                    <div class="col-sm-9"><h3>My Blog</h3></div>
+                  </div>
+                </div>
+            </div>
+            <div class="hero-post shadow">
+              <img
+                src="https://png.pngtree.com/png_detail/20181019/car-png-vector-material-png-clipart_3164061.png"
+                class="img-fluid"
+                alt=""
+              />
+              <div class="hero-post-badges text-center">
+                  <a href="#" class="p-2 mb-2 px-3"
+                    ><i class="fa fa-calendar" aria-hidden="true"></i> 25, July
+                    2020</a
+                  >
+                  <a href="#" class="p-2 px-3">Tech-ting</a>
+                </div>
+                <div class="hero-post-content">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <img
+                        alt="Author"
+                        class="img-fluid rounded-circle"
+                        src="https://avatars0.githubusercontent.com/u/44110563?s=400&u=e9a30f15589ca8f13107a67ed6145b5a3baf6233&v=4"
+                      />
+                    </div>
+                    <div class="col-sm-9"><h3>My Blog</h3></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN-BLOG SECTION -->
+    <section class="blog-posts py-3">
+      <div class="container shadow">
+        <!-- <div class="row">
+          <div class="col-md-8">
+            <article class="blog-post mb-3 shadow">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img
+                    class="img-fluid"
+                    alt=""
+                    src="https://png.pngtree.com/png_detail/20181019/car-png-vector-material-png-clipart_3164061.png"
+                  />
+                </div>
+                <div class="col-sm-8">
+                  <h3 class="m-0 mt-2">My Blg TITle</h3>
+                  <p class="m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Integer posuere, tellus semper euismod lobortis, sapien odio
+                    tristique leo, a rhoncus diam mauris nec odio. Fusce neque
+                    augue, bibendum nec tortor id, euismod congue sapien.
+                    Phasellus fringilla tincidunt tortor. Pellentesque habitant
+                    morbi tristique senectus et netus et malesuada fames ac
+                    turpis egestas. Mauris commodo et sem in consectetur. Proin
+                    semper est et molestie tempor. Mauris commodo vehicula
+                    facilisis. Etiam aliquam sollicitudin magna non
+                    pellentesque. Aenean volutpat, ante id egestas lobortis,
+                    sapien mauris aliquet felis, aliquet consequat nulla ligula
+                    et enim. Aenean at tincidunt arcu. Quisque non fringilla ex,
+                    eu aliquam massa. Mauris ultrices, elit iaculis congue
+                    tincidunt, lorem ex hendrerit nibh, id facilisis augue dui
+                    eu tellus.
+                  </p>
+                  <div class="badge">
+                    <a href="#">Technology</a>
+                    <a href="#">Programming</a>
+                    <a href="#">Sick</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="blog-post mb-3 shadow">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <img
+                      class="img-fluid"
+                      alt=""
+                      src="https://png.pngtree.com/png_detail/20181019/car-png-vector-material-png-clipart_3164061.png"
+                    />
+                  </div>
+                  <div class="col-sm-8">
+                    <h3 class="m-0 mt-2">My Blg TITle</h3>
+                    <p class="m-0">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Integer posuere, tellus semper euismod lobortis, sapien odio
+                      tristique leo, a rhoncus diam mauris nec odio. Fusce neque
+                      augue, bibendum nec tortor id, euismod congue sapien.
+                      Phasellus fringilla tincidunt tortor. Pellentesque habitant
+                      morbi tristique senectus et netus et malesuada fames ac
+                      turpis egestas. Mauris commodo et sem in consectetur. Proin
+                      semper est et molestie tempor. Mauris commodo vehicula
+                      facilisis. Etiam aliquam sollicitudin magna non
+                      pellentesque. Aenean volutpat, ante id egestas lobortis,
+                      sapien mauris aliquet felis, aliquet consequat nulla ligula
+                      et enim. Aenean at tincidunt arcu. Quisque non fringilla ex,
+                      eu aliquam massa. Mauris ultrices, elit iaculis congue
+                      tincidunt, lorem ex hendrerit nibh, id facilisis augue dui
+                      eu tellus.
+                    </p>
+                    <div class="badge">
+                      <a href="#">Technology</a>
+                      <a href="#">Programming</a>
+                      <a href="#">Sick</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            <article class="blog-post mb-3 shadow">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <img
+                      class="img-fluid"
+                      alt=""
+                      src="https://png.pngtree.com/png_detail/20181019/car-png-vector-material-png-clipart_3164061.png"
+                    />
+                  </div>
+                  <div class="col-sm-8">
+                    <h3 class="m-0 mt-2">My Blg TITle</h3>
+                    <p class="m-0">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Integer posuere, tellus semper euismod lobortis, sapien odio
+                      tristique leo, a rhoncus diam mauris nec odio. Fusce neque
+                      augue, bibendum nec tortor id, euismod congue sapien.
+                      Phasellus fringilla tincidunt tortor. Pellentesque habitant
+                      morbi tristique senectus et netus et malesuada fames ac
+                      turpis egestas. Mauris commodo et sem in consectetur. Proin
+                      semper est et molestie tempor. Mauris commodo vehicula
+                      facilisis. Etiam aliquam sollicitudin magna non
+                      pellentesque. Aenean volutpat, ante id egestas lobortis,
+                      sapien mauris aliquet felis, aliquet consequat nulla ligula
+                      et enim. Aenean at tincidunt arcu. Quisque non fringilla ex,
+                      eu aliquam massa. Mauris ultrices, elit iaculis congue
+                      tincidunt, lorem ex hendrerit nibh, id facilisis augue dui
+                      eu tellus.
+                    </p>
+                    <div class="badge">
+                      <a href="#">Technology</a>
+                      <a href="#">Programming</a>
+                      <a href="#">Sick</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+          </div>
+          <aside class="col-md-4 px-4">
+            Social Links -->
+            <!-- <div class="row social-links text-center">
+              <div class="col-sm-4 py-3">
+                <a class="social-link w-100">
+                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="col-sm-4 py-3 secondary-color">
+                <a class="social-link w-100">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="col-sm-4 py-3">
+                <a class="social-link w-100">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <h4 class="aside-heading mt-4 pl-2 mb-3 ">Popular Authors</h4>
+            <article class="row author mb-3">
+              <div class="col-sm-4">
+                <img
+                  class="img-fluid rounded-circle"
+                  alt=""
+                  src="https://avatars0.githubusercontent.com/u/44110563?s=400&u=e9a30f15589ca8f13107a67ed6145b5a3baf6233&v=4"
+                />
+              </div>
+              <div class="col-sm-8">
+                <h5 class="m-0">Prakhar Chaturvedi</h5>
+                <p class="m-0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <div class="author-social-links">
+                  <a href="#"
+                    ><i class="fa fa-facebook-official" aria-hidden="true"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fa fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fa fa-instagram" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+            <article class="row author mb-3">
+              <div class="col-sm-4">
+                <img
+                  class="img-fluid rounded-circle"
+                  alt=""
+                  src="https://avatars0.githubusercontent.com/u/44110563?s=400&u=e9a30f15589ca8f13107a67ed6145b5a3baf6233&v=4"
+                />
+              </div>
+              <div class="col-sm-8">
+                <h5 class="m-0">Prakhar Chaturvedi</h5>
+                <p class="m-0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <div class="author-social-links">
+                  <a href="#"
+                    ><i class="fa fa-facebook-official" aria-hidden="true"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fa fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fa fa-instagram" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+            <article class="row author mb-3">
+              <div class="col-sm-4">
+                <img
+                  class="img-fluid rounded-circle"
+                  alt=""
+                  src="https://avatars0.githubusercontent.com/u/44110563?s=400&u=e9a30f15589ca8f13107a67ed6145b5a3baf6233&v=4"
+                />
+              </div>
+              <div class="col-sm-8">
+                <h5 class="m-0">Prakhar Chaturvedi</h5>
+                <p class="m-0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <div class="author-social-links">
+                  <a href="#"
+                    ><i class="fa fa-facebook-official" aria-hidden="true"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fa fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fa fa-instagram" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+            <article class="row author mb-3">
+              <div class="col-sm-4">
+                <img
+                  class="img-fluid rounded-circle"
+                  alt=""
+                  src="https://avatars0.githubusercontent.com/u/44110563?s=400&u=e9a30f15589ca8f13107a67ed6145b5a3baf6233&v=4"
+                />
+              </div>
+              <div class="col-sm-8">
+                <h5 class="m-0">Prakhar Chaturvedi</h5>
+                <p class="m-0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <div class="author-social-links">
+                  <a href="#"
+                    ><i class="fa fa-facebook-official" aria-hidden="true"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fa fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fa fa-instagram" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+            <h4 class="aside-heading mt-4 pl-2 mb-3">Popular Categories</h4>
+            <div class="badges w-100">
+                <a href="#">Technology</a>
+                <a href="#">Programming</a>
+                <a href="#">Sick</a>
+                <a href="#">Technology</a>
+                <a href="#">Programming</a>
+                <a href="#">Sick</a>
+            </div>
+          </aside>
+        </div> -->
+        <div class="row">
+            <div class="col-md-8">
+                <% articles.forEach(article => { %>
+                  <div class="blog-post mb-3 shadow">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img
+                            class="img-fluid"
+                            alt=""
+                            src="https://png.pngtree.com/png_detail/20181019/car-png-vector-material-png-clipart_3164061.png"
+                            />
+                        </div>
+                        <div class="col-sm-8">
+                                <h3 class="m-0 my-2"><%= article.title %></h3>
+                                <div class="card-subtitle text muted mb-2">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i> <%= article.createdAt.toLocaleDateString() %>
+                                </div>
+                                <div class="card-text mb-2"><%= article.markdown.slice(0, 450) %> ...</div>
+                                <a href="articles/<%= article.slug %>" class="btn btn-primary mr-2"
+                                  >Read More</a
+                                >
+                                <form
+                                  action="/articles/<%= article.id %>?_method=DELETE"
+                                  method="POST"
+                                  class="d-inline"
+                                >
+                                  <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                                <!-- <div class="badges w-100">
+                                    <a href="#">Technology</a>
+                                    <a href="#">Programming</a>
+                                    <a href="#">Sick</a>
+                                </div> -->
+                        </div>
+                    </div>
+                  </div>
+                  <% })%>
+            </div>
+            <aside class="col-md-4 px-4">
+              <!-- Social Links -->
+              <div class="row social-links text-center">
+                <div class="col-sm-4 py-3">
+                  <a class="social-link w-100">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <div class="col-sm-4 py-3 secondary-color">
+                  <a class="social-link w-100">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <div class="col-sm-4 py-3">
+                  <a class="social-link w-100">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <h4 class="aside-heading mt-4 pl-2 mb-3 ">Popular Authors</h4>
+              <article class="row author mb-3">
+                <div class="col-sm-4">
+                  <img
+                    class="img-fluid rounded-circle"
+                    alt=""
+                    src="https://avatars0.githubusercontent.com/u/44110563?s=400&u=e9a30f15589ca8f13107a67ed6145b5a3baf6233&v=4"
+                  />
+                </div>
+                <div class="col-sm-8">
+                  <h5 class="m-0">Prakhar Chaturvedi</h5>
+                  <p class="m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <div class="author-social-links">
+                    <a href="#"
+                      ><i class="fa fa-facebook-official" aria-hidden="true"></i
+                    ></a>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+              <article class="row author mb-3">
+                <div class="col-sm-4">
+                  <img
+                    class="img-fluid rounded-circle"
+                    alt=""
+                    src="https://avatars0.githubusercontent.com/u/44110563?s=400&u=e9a30f15589ca8f13107a67ed6145b5a3baf6233&v=4"
+                  />
+                </div>
+                <div class="col-sm-8">
+                  <h5 class="m-0">Prakhar Chaturvedi</h5>
+                  <p class="m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <div class="author-social-links">
+                    <a href="#"
+                      ><i class="fa fa-facebook-official" aria-hidden="true"></i
+                    ></a>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+              <article class="row author mb-3">
+                <div class="col-sm-4">
+                  <img
+                    class="img-fluid rounded-circle"
+                    alt=""
+                    src="https://avatars0.githubusercontent.com/u/44110563?s=400&u=e9a30f15589ca8f13107a67ed6145b5a3baf6233&v=4"
+                  />
+                </div>
+                <div class="col-sm-8">
+                  <h5 class="m-0">Prakhar Chaturvedi</h5>
+                  <p class="m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <div class="author-social-links">
+                    <a href="#"
+                      ><i class="fa fa-facebook-official" aria-hidden="true"></i
+                    ></a>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+              <article class="row author mb-3">
+                <div class="col-sm-4">
+                  <img
+                    class="img-fluid rounded-circle"
+                    alt=""
+                    src="https://avatars0.githubusercontent.com/u/44110563?s=400&u=e9a30f15589ca8f13107a67ed6145b5a3baf6233&v=4"
+                  />
+                </div>
+                <div class="col-sm-8">
+                  <h5 class="m-0">Prakhar Chaturvedi</h5>
+                  <p class="m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <div class="author-social-links">
+                    <a href="#"
+                      ><i class="fa fa-facebook-official" aria-hidden="true"></i
+                    ></a>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+              <h4 class="aside-heading mt-4 pl-2 mb-3">Popular Categories</h4>
+              <div class="badges w-100">
+                  <a href="#">Technology</a>
+                  <a href="#">Programming</a>
+                  <a href="#">Sick</a>
+                  <a href="#">Technology</a>
+                  <a href="#">Programming</a>
+                  <a href="#">Sick</a>
+                  <a href="#">Technology</a>
+                  <a href="#">Programming</a>
+                  <a href="#">Sick</a>
+                  <a href="#">Technology</a>
+                  <a href="#">Programming</a>
+                  <a href="#">Sick</a>
+              </div>
+            </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col md-4">
+            <a class="footer-logo" href="">Blog</a>
+            <p>This is the footer section of the blog frens. Henlo!</p>
+          </div>
+          <div class="col md-4">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a>Home</a></li>
+              <li><a>Terms of Services</a></li>
+              <li><a>Privacy Policy</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="col md-4">
+            <h4>Newsletter</h4>
+            <form class="form-inline my-2 my-lg-0">
+                <input
+                  class="form-control border-0"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn-main btn btn-success my-sm-0 border-0" type="submit">
+                  Search
+                </button>
+              </form>
+          </div>
+        </div>
+        <div class="w-100 text-center credits">
+          <p>
+            Made for creative purpose by Prakhar Chaturvedi &copy; 2020, All
+            rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ROUTE BLOG -->
+    <!-- <div class="container">
+      <h1 class="mb-3">Car - Blogging</h1>
+      <!-- <a href="/articles/new" class="btn btn-success">New Article</a>
+      <% articles.forEach(article => { %>
+      <div class="card mt-3">
+        <div class="card-body">
+          <h4 class="card-title"><%= article.title %></h4>
+          <div class="card-subtitle text muted mb-2">
+            <%= article.createdAt.toLocaleDateString() %>
+          </div>
+          <div class="card-text mb-2"><%= article.description %></div>
+          <a href="articles/<%= article.slug %>" class="btn btn-primary"
+            >Read More</a
+          >
+          <form
+            action="/articles/<%= article.id %>?_method=DELETE"
+            method="POST"
+            class="d-inline"
+          >
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+      <% })%>
+    </div> -->
+  </body>
+</html>
