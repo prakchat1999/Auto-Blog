@@ -30,8 +30,12 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<img src = "/Users/prakharchaturvedi/Documents/HTML:CSS/new-blog/img/Home-Page-SS.png"/>
-<img src="/Users/prakharchaturvedi/Documents/HTML:CSS/new-blog/img/Show-More-SS.png"/>
+<a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="img/Home-Page-SS.png" alt="Logo" width="80" height="80">
+  </a>
+<a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="img/Show-More-SS.png" alt="Logo" width="80" height="80">
+  </a>
 
 I created this website because: I have a passion for cars and coding, and a convenient Auto - Blogging website is the best way to:
 
