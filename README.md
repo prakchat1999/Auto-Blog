@@ -30,12 +30,11 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<img src = "Readme/images/Home-Page-SS.png">
-<img src="Readme/images/Show-More-SS.png">
+<img src = "/Users/prakharchaturvedi/Documents/HTML:CSS/new-blog/img/Home-Page-SS.png"/>
+<img src="/Users/prakharchaturvedi/Documents/HTML:CSS/new-blog/img/Show-More-SS.png"/>
 
-I created this website because: I have a passion for cars and coding, and a convenient Auto - Blogging website is the best way to 
+I created this website because: I have a passion for cars and coding, and a convenient Auto - Blogging website is the best way to:
 
-Here's why:
 * I have a passion for cars and coding.
 * I wanted a convenient Auto - Blogging website where I could write my blogs conveniently.
 * I wanted a place to connect with my fellow petrolheads.
