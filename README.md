@@ -32,8 +32,14 @@
 <a href="https://github.com/prakchat1999/Auto-Blog">
     <img src="img/Show-More-SS.png" alt="Logo">
   </a>
+<a href="https://github.com/prakchat1999/Auto-Blog">
+    <img src="img/Main-Blog-SS.png" alt="Logo">
+  </a>
+<a href="https://github.com/prakchat1999/Auto-Blog">
+    <img src="img/Footer-SS.png" alt="Logo">
+  </a>
 
-I created this website because: I have a passion for cars and coding, and a convenient Auto - Blogging website is the best way to:
+I created this website because:
 
 * I have a passion for cars and coding.
 * I wanted a convenient Auto - Blogging website where I could write my blogs conveniently.
